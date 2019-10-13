@@ -1,6 +1,5 @@
 <?php
 
-
 namespace database;
 
 use mysqli;
