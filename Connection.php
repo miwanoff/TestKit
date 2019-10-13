@@ -24,10 +24,6 @@ class Connection
         $this->connection = new mysqli(self::SERVER_NAME, self::USERNAME, self::PASSWORD, self::DB_NAME);
         $this->connection->set_charset("utf8");
 
-        //$this->connection = mysqli_init();
-        //$this->connection->set_charset('utf8');
-        //$this->connection->options(MYSQLI_SET_CHARSET_NAME, "utf8");
-       // $this->connection->connect(self::SERVER_NAME, self::USERNAME, self::PASSWORD, self::DB_NAME);
         if ($this->connection->connect_error) {
             die("Connection failed: " . mb_convert_encoding($this->connection->connect_error, 'utf8', 'cp1251'));
         }
